@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>H:/MightyKnight/MightyKnight/Content/fonts/Arial.spritefont</SourceFile>
+  <SourceTime>2016-03-16T12:48:04+10:30</SourceTime>
+  <DestFile>H:/MightyKnight/MightyKnight/Content/bin/Windows/fonts/Arial.xnb</DestFile>
+  <DestTime>2018-03-03T20:57:07.5366168+10:30</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2017-03-02T01:35:36+10:30</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2017-03-02T01:35:36+10:30</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

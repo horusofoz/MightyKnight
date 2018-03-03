@@ -4,7 +4,10 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Jeff/source/repos/MightyKnight/MightyKnight/Content/hero.png</File>
-    <File>C:/Users/Jeff/source/repos/MightyKnight/MightyKnight/Content/Arial.spritefont</File>
+    <File>H:/MightyKnight/MightyKnight/Content/fonts/Arial.spritefont</File>
+    <File>H:/MightyKnight/MightyKnight/Content/sprites/hero.png</File>
+    <File>H:/MightyKnight/MightyKnight/Content/levels/Level01.tmx</File>
+    <File>H:/MightyKnight/MightyKnight/Content/levels/Castle Tileset.png</File>
+    <File>H:/MightyKnight/MightyKnight/Content/levels/Fantasy Tileset.png</File>
   </SourceFiles>
 </SourceFileCollection>
