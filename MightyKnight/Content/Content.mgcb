@@ -33,11 +33,6 @@
 /processorParam:TextureFormat=Color
 /build:sprites/hero.png
 
-#begin levels/Level01.tmx
-/importer:TiledMapImporter
-/processor:TiledMapProcessor
-/build:levels/Level01.tmx
-
 #begin levels/Castle Tileset.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -61,4 +56,9 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:levels/Fantasy Tileset.png
+
+#begin levels/Level01.tmx
+/importer:TiledMapImporter
+/processor:TiledMapProcessor
+/build:levels/Level01.tmx
 

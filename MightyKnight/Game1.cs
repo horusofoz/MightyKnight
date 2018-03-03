@@ -5,6 +5,7 @@ using MonoGame.Extended;
 using MonoGame.Extended.Tiled;
 using MonoGame.Extended.Tiled.Graphics;
 using MonoGame.Extended.ViewportAdapters;
+using System;
 
 namespace MightyKnight
 {
@@ -16,12 +17,30 @@ namespace MightyKnight
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        Player player = new Player();
+        Player player = null;
 
         Camera2D camera = null;
         TiledMap map = null;
         TiledMapRenderer mapRenderer = null;
+        TiledMapTileLayer collisionLayer;
 
+        public static int tile = 64;
+        public static float meter = tile; // abitrary choice for 1m (1 tile = 1 meter)
+        public static float gravity = meter * 9.8f * 6.0f; // very exaggerated gravity (6x)
+        public static Vector2 maxVelocity = new Vector2(meter * 10, meter * 15);
+        public static float acceleration = maxVelocity.X * 2; // horizontal acceleration - take 1/2 second to reach max velocity
+        public static float friction = maxVelocity.X * 6; // horizontal friction - take 1/6 second to stop from max velocity
+        public static float jumpImpulse = meter * 1500; // (a large) instantaneous jump impulse
+
+        public int ScreenWidth
+        {
+            get { return graphics.GraphicsDevice.Viewport.Width; }
+        }
+
+        public int ScreenHeight
+        {
+            get { return graphics.GraphicsDevice.Viewport.Height; }
+        }
 
         public Game1()
         {
@@ -38,6 +57,7 @@ namespace MightyKnight
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            player = new Player(this);
 
             base.Initialize();
         }
@@ -54,13 +74,19 @@ namespace MightyKnight
             // TODO: use this.Content to load your game content here
             player.Load(Content);
 
-            var viewportAdapter = new BoxingViewportAdapter(Window, GraphicsDevice, graphics.GraphicsDevice.Viewport.Width, graphics.GraphicsDevice.Viewport.Height);
+            var viewportAdapter = new BoxingViewportAdapter(Window, GraphicsDevice, ScreenWidth, ScreenHeight);
 
             camera = new Camera2D(viewportAdapter);
-            camera.Position = new Vector2(0, graphics.GraphicsDevice.Viewport.Height);
+            camera.Position = new Vector2(0, ScreenHeight);
 
             map = Content.Load<TiledMap>("levels/Level01");
             mapRenderer = new TiledMapRenderer(GraphicsDevice);
+
+            foreach(TiledMapTileLayer layer in map.TileLayers)
+            {
+                if (layer.Name == "Collisions")
+                    collisionLayer = layer;
+            }
         }
 
         /// <summary>
@@ -86,6 +112,8 @@ namespace MightyKnight
             float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
             player.Update(deltaTime);
 
+            camera.Position = player.Position - new Vector2(ScreenWidth / 2, ScreenHeight / 2);
+
             base.Update(gameTime);
         }
 
@@ -109,6 +137,47 @@ namespace MightyKnight
             spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+
+        public int PixelToTile(float pixelCoord)
+        {
+            return (int)Math.Floor(pixelCoord / tile);
+        }
+
+        public int TileToPixel(int tileCoord)
+        {
+            return tile * tileCoord;
+        }
+
+        public int CellAtPixelCoord(Vector2 pixelCoords)
+        {
+            if(pixelCoords.X < 0 || pixelCoords.X > map.WidthInPixels || pixelCoords.Y < 0)
+            {
+                return 1;
+            }
+            // let the player drop of the bottom of the screen (this means death)
+            if (pixelCoords.Y > map.HeightInPixels)
+            {
+                return 0;
+            }
+            return CellAtTileCoord(PixelToTile(pixelCoords.X), PixelToTile(pixelCoords.Y));
+        }
+
+        public int CellAtTileCoord(int tx, int ty)
+        {
+            if(tx < 0 || tx >= map.Width || ty < 0)
+            {
+                return 1;
+            }
+            // let the player drop of the bottom of the screen (this means death)
+            if(ty >= map.Height)
+            {
+                return 0;
+            }
+
+            TiledMapTile? tile;
+            collisionLayer.TryGetTile(tx, ty, out tile);
+            return tile.Value.GlobalIdentifier;
         }
     }
 }
