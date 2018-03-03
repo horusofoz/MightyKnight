@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>H:/MightyKnight/MightyKnight/Content/levels/Level01.tmx</SourceFile>
-  <SourceTime>2018-03-03T23:57:11.216126+10:30</SourceTime>
+  <SourceTime>2018-03-04T00:27:00.2499931+10:30</SourceTime>
   <DestFile>H:/MightyKnight/MightyKnight/Content/bin/Windows/levels/Level01.xnb</DestFile>
-  <DestTime>2018-03-03T23:57:32.4864109+10:30</DestTime>
+  <DestTime>2018-03-04T00:29:24.698538+10:30</DestTime>
   <Importer>TiledMapImporter</Importer>
   <ImporterTime>2017-12-11T04:41:22+10:30</ImporterTime>
   <Processor>TiledMapProcessor</Processor>

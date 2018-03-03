@@ -33,7 +33,11 @@ namespace MightyKnight
 
         public void Load(ContentManager content)
         {
-            sprite.Load(content, "hero");
+            AnimatedTexture animation = new AnimatedTexture(Vector2.Zero, 0, 1, 1);
+            animation.Load(content, "sprites/walk", 12, 20);
+
+            sprite.Add(animation, 0, -5);
+            sprite.Pause();
         }
 
         public void Update(float deltaTime)
@@ -58,10 +62,14 @@ namespace MightyKnight
             if (Keyboard.GetState().IsKeyDown(Keys.Left) == true)
             {
                 acceleration.X -= Game1.acceleration;
+                sprite.SetFlipped(true);
+                sprite.Play();
             }
             else if(wasMovingLeft == true)
             {
                 acceleration.X += Game1.friction;
+                sprite.SetFlipped(false);
+                sprite.Play();
             }
             if(Keyboard.GetState().IsKeyDown(Keys.Right) == true)
             {
@@ -93,6 +101,7 @@ namespace MightyKnight
             {
                 // clamp at zero to prevent frivtion from making us jiggle side to side
                 velocity.X = 0;
+                sprite.Pause();
             }
 
             // collision detection
@@ -145,7 +154,8 @@ namespace MightyKnight
                     {
                         // clamp the x position to avoid moving to the platform we just hit
                         sprite.position.X = game.TileToPixel(tx);
-                        this.velocity.X = 0;    // Stop horizantal movement
+                        this.velocity.X = 0;    // Stop horizantal velocity
+                        sprite.Pause();
                     }
                 }
                 else if(this.velocity.X < 0)
@@ -154,7 +164,8 @@ namespace MightyKnight
                     {
                         // clamp the x position to avoid moving into the platform we just hit
                         sprite.position.X = game.TileToPixel(tx + 1);
-                        this.velocity.X = 0;    // Stop horizantal movement
+                        this.velocity.X = 0;    // Stop horizantal velocity
+                        sprite.Pause();
                     }
                 }
 

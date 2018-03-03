@@ -25,7 +25,6 @@ C:\Users\Jeff\source\repos\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Sharp
 C:\Users\Jeff\source\repos\MightyKnight\MightyKnight\obj\x86\Debug\MightyKnight.exe
 C:\Users\Jeff\source\repos\MightyKnight\MightyKnight\obj\x86\Debug\MightyKnight.pdb
 H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\levels\Level01.xnb
-H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\sprites\hero.xnb
 H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\fonts\Arial.xnb
 H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\MightyKnight.exe
 H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\MightyKnight.pdb
@@ -61,3 +60,4 @@ H:\MightyKnight\MightyKnight\obj\x86\Debug\MightyKnight.exe
 H:\MightyKnight\MightyKnight\obj\x86\Debug\MightyKnight.pdb
 H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\levels\Castle Tileset.xnb
 H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\levels\Fantasy Tileset.xnb
+H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\sprites\walk.xnb

@@ -5,9 +5,9 @@
   <Config />
   <SourceFiles>
     <File>H:/MightyKnight/MightyKnight/Content/fonts/Arial.spritefont</File>
-    <File>H:/MightyKnight/MightyKnight/Content/sprites/hero.png</File>
     <File>H:/MightyKnight/MightyKnight/Content/levels/Castle Tileset.png</File>
     <File>H:/MightyKnight/MightyKnight/Content/levels/Fantasy Tileset.png</File>
     <File>H:/MightyKnight/MightyKnight/Content/levels/Level01.tmx</File>
+    <File>H:/MightyKnight/MightyKnight/Content/sprites/walk.png</File>
   </SourceFiles>
 </SourceFileCollection>
