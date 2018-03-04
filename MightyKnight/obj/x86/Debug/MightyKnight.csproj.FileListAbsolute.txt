@@ -65,3 +65,12 @@ H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\fonts\Lucida.xnb
 H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\sprites\Coin.xnb
 H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\sprites\heart.xnb
 H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\sprites\trophy.xnb
+H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\sounds\pickupCoin.xnb
+H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\sounds\sword.xnb
+H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\music\harp.wma
+H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\music\harp.xnb
+H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\sounds\gruntsound.xnb
+H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\sounds\jumpland.xnb
+H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\sounds\die.xnb
+H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\sprites\chest.xnb
+H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\sprites\zombieWalk.xnb

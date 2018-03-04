@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 using MonoGame.Extended;
 using MonoGame.Extended.Tiled;
 using MonoGame.Extended.Tiled.Graphics;
@@ -24,6 +25,8 @@ namespace MightyKnight
         TiledMap map = null;
         TiledMapRenderer mapRenderer = null;
         TiledMapTileLayer collisionLayer;
+
+        Song gameMusic;
 
         // HUD
         SpriteFont lucidaFont;
@@ -106,6 +109,10 @@ namespace MightyKnight
                 if (layer.Name == "Collisions")
                     collisionLayer = layer;
             }
+
+            // Load the game music
+            gameMusic = Content.Load<Song>("music/harp");
+            MediaPlayer.Play(gameMusic);
         }
 
         /// <summary>

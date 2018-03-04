@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -16,6 +17,10 @@ namespace MightyKnight
 
         Vector2 velocity = Vector2.Zero;
         Vector2 position = Vector2.Zero;
+
+        // Jump sound and instance
+        SoundEffect jumpSound;
+        SoundEffectInstance jumpSoundInstance;
 
         public Vector2 Position
         {
@@ -35,6 +40,9 @@ namespace MightyKnight
         {
             AnimatedTexture animation = new AnimatedTexture(Vector2.Zero, 0, 1, 1);
             animation.Load(content, "sprites/walk", 12, 20);
+
+            jumpSound = content.Load<SoundEffect>("sounds/gruntsound");
+            jumpSoundInstance = jumpSound.CreateInstance();
 
             sprite.Add(animation, 0, -5);
             sprite.Pause();
@@ -85,6 +93,7 @@ namespace MightyKnight
             {
                 acceleration.Y -= Game1.jumpImpulse;
                 this.isJumping = true;
+                jumpSoundInstance.Play();
             }
 
             // integrate the forces to calculate the new position and velocity
@@ -96,10 +105,10 @@ namespace MightyKnight
 
             sprite.position += velocity * deltaTime;
 
-            // Quuick fix to ensure player stops when not pressing a direction rather than friction pushing minutely left and right
+            // Quick fix to ensure player stops when not pressing a direction rather than friction pushing minutely left and right
             if((wasMovingLeft && (velocity.X > 0)) || (wasMovingRight && (velocity.X < 0)))
             {
-                // clamp at zero to prevent frivtion from making us jiggle side to side
+                // clamp at zero to prevent friction from making us jiggle side to side
                 velocity.X = 0;
                 sprite.Pause();
             }
@@ -132,7 +141,7 @@ namespace MightyKnight
                     this.isFalling = false;     // No longer falling
                     this.isJumping = false;     // No longer humping
                     ny = false;                 // No longer overlaps the cells below;
-
+                    
                 }
             }
             else if(this.velocity.Y < 0)
