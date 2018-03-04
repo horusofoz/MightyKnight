@@ -104,7 +104,7 @@ namespace MightyKnight
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(spriteBatch);
+            sprite.Draw(spriteBatch);
         }
     }
 }

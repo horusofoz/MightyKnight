@@ -7,6 +7,7 @@ using MonoGame.Extended.Tiled;
 using MonoGame.Extended.Tiled.Graphics;
 using MonoGame.Extended.ViewportAdapters;
 using System;
+using System.Collections.Generic;
 
 namespace MightyKnight
 {
@@ -37,6 +38,9 @@ namespace MightyKnight
         int lives = 3;
         int coins = 0;
         Color scoreColor = new Color(19, 193, 19);
+
+        List<Enemy> enemies = new List<Enemy>();
+        Sprite goal = null;
 
 
         public static int tile = 64;
@@ -110,6 +114,32 @@ namespace MightyKnight
                     collisionLayer = layer;
             }
 
+            foreach (TiledMapObjectLayer layer in map.ObjectLayers)
+            {
+                if(layer.Name == "Enemies")
+                {
+                    foreach(TiledMapObject obj in layer.Objects)
+                    {
+                        Enemy enemy = new Enemy(this);
+                        enemy.Load(Content);
+                        enemy.Position = new Vector2(obj.Position.X, obj.Position.Y);
+                        enemies.Add(enemy);
+                    }
+                }
+                if(layer.Name == "Goal")
+                {
+                    TiledMapObject obj = layer.Objects[0];
+                    if(obj != null)
+                    {
+                        AnimatedTexture anim = new AnimatedTexture(Vector2.Zero, 0, 1, 1);
+                        anim.Load(Content, "sprites/chest", 1, 1);
+                        goal = new Sprite();
+                        goal.Add(anim, 0, 5);
+                        goal.position = new Vector2(obj.Position.X, obj.Position.Y);
+                    }
+                }
+            }
+
             // Load the game music
             gameMusic = Content.Load<Song>("music/harp");
             MediaPlayer.Play(gameMusic);
@@ -138,6 +168,11 @@ namespace MightyKnight
             float deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
             player.Update(deltaTime);
 
+            foreach(Enemy e in enemies)
+            {
+                e.Update(deltaTime);
+            }
+
             camera.Position = player.Position - new Vector2(ScreenWidth / 2, ScreenHeight / 2);
 
             base.Update(gameTime);
@@ -160,6 +195,14 @@ namespace MightyKnight
             mapRenderer.Draw(map, ref viewMatrix, ref projectionMatrix);
             player.Draw(spriteBatch);
 
+            // Enemies
+            foreach (Enemy e in enemies)
+            {
+                e.Draw(spriteBatch);
+            }
+
+            goal.Draw(spriteBatch);
+
             // draw all the GUI components in a separate SpritebatchBatch  section
             // Coins
             spriteBatch.DrawString(lucidaFont, coins.ToString("00"), new Vector2(150, 20), Color.Gold);
@@ -181,38 +224,28 @@ namespace MightyKnight
         {
             return (int)Math.Floor(pixelCoord / tile);
         }
-
         public int TileToPixel(int tileCoord)
         {
             return tile * tileCoord;
         }
-
         public int CellAtPixelCoord(Vector2 pixelCoords)
         {
-            if(pixelCoords.X < 0 || pixelCoords.X > map.WidthInPixels || pixelCoords.Y < 0)
-            {
+            if (pixelCoords.X < 0 ||
+            pixelCoords.X > map.WidthInPixels || pixelCoords.Y < 0)
                 return 1;
-            }
             // let the player drop of the bottom of the screen (this means death)
             if (pixelCoords.Y > map.HeightInPixels)
-            {
                 return 0;
-            }
-            return CellAtTileCoord(PixelToTile(pixelCoords.X), PixelToTile(pixelCoords.Y));
+            return CellAtTileCoord(
+            PixelToTile(pixelCoords.X), PixelToTile(pixelCoords.Y));
         }
-
         public int CellAtTileCoord(int tx, int ty)
         {
-            if(tx < 0 || tx >= map.Width || ty < 0)
-            {
+            if (tx < 0 || tx >= map.Width || ty < 0)
                 return 1;
-            }
             // let the player drop of the bottom of the screen (this means death)
-            if(ty >= map.Height)
-            {
+            if (ty >= map.Height)
                 return 0;
-            }
-
             TiledMapTile? tile;
             collisionLayer.TryGetTile(tx, ty, out tile);
             return tile.Value.GlobalIdentifier;
