@@ -1,10 +1,3 @@
-20180304 8:25 PM
-Changes
-* Removed Sign layer from map
-* Implement rest of tutorial steps from 08 Finishing The Plaformer
-* Found bug from tutorial that prevented compilation
-	* Enemy Draw sprite.Draw not spriteBatch.Draw
-
 Known Issues
 * Walking animation when standing still
 * Can stand on air - Appears issue with slightly overlapping tiles from collision layer
@@ -14,7 +7,21 @@ Known Issues
 * Enemy and chest sprites drawn underneath positions
 
 TBD
-* Enemy flipping
+* Add pickups
+* Correct obejct locations
+
+Changes
+
+20180304 8:41
+* Implemented enemy flipping
+* Resized Chest
+
+20180304 8:25 PM
+Changes
+* Removed Sign layer from map
+* Implement rest of tutorial steps from 08 Finishing The Plaformer
+* Found bug from tutorial that prevented compilation
+	* Enemy Draw sprite.Draw not spriteBatch.Draw
 
 20180304 7:56 PM
 Changes

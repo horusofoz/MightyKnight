@@ -136,18 +136,6 @@
 /processorParam:Quality=Best
 /build:sounds/die.wav
 
-#begin sprites/chest.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:sprites/chest.png
-
 #begin sprites/zombieWalk.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -164,4 +152,16 @@
 /importer:TiledMapImporter
 /processor:TiledMapProcessor
 /build:levels/Level01.tmx
+
+#begin sprites/chest.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:sprites/chest.png
 
