@@ -80,6 +80,7 @@ namespace MightyKnight
                         this.velocity.X = 0;
                         this.moveRight = false;
                         this.pause = 0.5f;
+                        sprite.SetFlipped(false);
                     }
                 }
 
@@ -94,6 +95,7 @@ namespace MightyKnight
                         this.velocity.X = 0;
                         this.moveRight = true;
                         this.pause = 0.5f;
+                        sprite.SetFlipped(true);
                     }
                 }
 

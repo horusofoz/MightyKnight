@@ -1,3 +1,21 @@
+20180304 8:25 PM
+Changes
+* Removed Sign layer from map
+* Implement rest of tutorial steps from 08 Finishing The Plaformer
+* Found bug from tutorial that prevented compilation
+	* Enemy Draw sprite.Draw not spriteBatch.Draw
+
+Known Issues
+* Walking animation when standing still
+* Can stand on air - Appears issue with slightly overlapping tiles from collision layer
+* Can walk off the edge of the level
+* Can fall through floor of level
+* HUD is hard coded location, doesn't follow camera
+* Enemy and chest sprites drawn underneath positions
+
+TBD
+* Enemy flipping
+
 20180304 7:56 PM
 Changes
 * Noted error with Spritebach call from Enemy class
