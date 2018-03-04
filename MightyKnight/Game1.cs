@@ -25,6 +25,17 @@ namespace MightyKnight
         TiledMapRenderer mapRenderer = null;
         TiledMapTileLayer collisionLayer;
 
+        // HUD
+        SpriteFont lucidaFont;
+        Texture2D heart = null;
+        Texture2D coin = null;
+        Texture2D trophy = null;
+        int score = 0;
+        int lives = 3;
+        int coins = 0;
+        Color scoreColor = new Color(19, 193, 19);
+
+
         public static int tile = 64;
         public static float meter = tile; // abitrary choice for 1m (1 tile = 1 meter)
         public static float gravity = meter * 9.8f * 6.0f; // very exaggerated gravity (6x)
@@ -76,6 +87,11 @@ namespace MightyKnight
 
             // TODO: use this.Content to load your game content here
             player.Load(Content);
+
+            lucidaFont = Content.Load<SpriteFont>("fonts/Lucida");
+            heart = Content.Load<Texture2D>("sprites/heart");
+            coin = Content.Load<Texture2D>("sprites/coin");
+            trophy = Content.Load<Texture2D>("sprites/trophy");
 
             var viewportAdapter = new BoxingViewportAdapter(Window, GraphicsDevice, ScreenWidth, ScreenHeight);
 
@@ -132,13 +148,25 @@ namespace MightyKnight
             var viewMatrix = camera.GetViewMatrix();
             var projectionMatrix = Matrix.CreateOrthographicOffCenter(0, GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height, 0, 0f, -1f);
 
-
             spriteBatch.Begin(transformMatrix: viewMatrix);
 
             mapRenderer.Draw(map, ref viewMatrix, ref projectionMatrix);
             player.Draw(spriteBatch);
-            spriteBatch.End();
 
+            // draw all the GUI components in a separate SpritebatchBatch  section
+            // Coins
+            spriteBatch.DrawString(lucidaFont, coins.ToString("00"), new Vector2(150, 20), Color.Gold);
+            spriteBatch.Draw(coin, new Vector2(110, 20));
+
+            // Lives
+            spriteBatch.Draw(heart, new Vector2(20, 20));
+            spriteBatch.DrawString(lucidaFont, lives.ToString("00"), new Vector2(60, 20), Color.Red);
+
+            // Score
+            spriteBatch.Draw(trophy, new Vector2(200, 20));
+            spriteBatch.DrawString(lucidaFont, score.ToString("00000"), new Vector2(250, 20), scoreColor);
+
+            spriteBatch.End();
             base.Draw(gameTime);
         }
 

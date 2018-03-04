@@ -9,5 +9,9 @@
     <File>H:/MightyKnight/MightyKnight/Content/levels/Fantasy Tileset.png</File>
     <File>H:/MightyKnight/MightyKnight/Content/levels/Level01.tmx</File>
     <File>H:/MightyKnight/MightyKnight/Content/sprites/walk.png</File>
+    <File>H:/MightyKnight/MightyKnight/Content/fonts/Lucida.spritefont</File>
+    <File>H:/MightyKnight/MightyKnight/Content/sprites/coin.png</File>
+    <File>H:/MightyKnight/MightyKnight/Content/sprites/heart.png</File>
+    <File>H:/MightyKnight/MightyKnight/Content/sprites/trophy.png</File>
   </SourceFiles>
 </SourceFileCollection>

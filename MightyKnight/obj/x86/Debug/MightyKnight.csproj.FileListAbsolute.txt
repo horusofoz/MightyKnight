@@ -61,3 +61,7 @@ H:\MightyKnight\MightyKnight\obj\x86\Debug\MightyKnight.pdb
 H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\levels\Castle Tileset.xnb
 H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\levels\Fantasy Tileset.xnb
 H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\sprites\walk.xnb
+H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\fonts\Lucida.xnb
+H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\sprites\Coin.xnb
+H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\sprites\heart.xnb
+H:\MightyKnight\MightyKnight\bin\Windows\x86\Debug\Content\sprites\trophy.xnb

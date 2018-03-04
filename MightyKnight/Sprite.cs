@@ -27,7 +27,7 @@ namespace MightyKnight
             animations.Add(animation);
             animationOffsets.Add(new Vector2(xOffset, yOffset));
         }
-
+        
         public void Load(ContentManager content, string asset)
         {
             texture = content.Load<Texture2D>(asset);

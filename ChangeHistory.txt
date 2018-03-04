@@ -1,0 +1,17 @@
+20180304 03:31 PM
+
+Changes
+* Added Lucida Spritefont
+* Added HUDConcept01 graphics
+* Added score, lives and coins for HUD
+
+Known Issues
+* Walking animation when standing still
+* Can stand on air - Appears issue with slightly overlapping tiles from collision layer
+* Can walk off the edge of the level
+* Can fall through floor of level
+* HUD is hard coded location, doesn't follow camera
+
+TBD
+* Define score mechanism
+* Define lives/death
