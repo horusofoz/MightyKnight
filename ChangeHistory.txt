@@ -8,11 +8,14 @@ Known Issues
 
 TBD
 * Add pickups
-* Correct obejct locations
 
 Changes
 
-20180304 8:41
+20180304 8:55 PM
+* Kinda fixed zombie and chest placement
+	* Zombies still a little low
+
+20180304 8:41 PM
 * Implemented enemy flipping
 * Resized Chest
 

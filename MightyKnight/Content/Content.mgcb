@@ -148,11 +148,6 @@
 /processorParam:TextureFormat=Color
 /build:sprites/zombieWalk.png
 
-#begin levels/Level01.tmx
-/importer:TiledMapImporter
-/processor:TiledMapProcessor
-/build:levels/Level01.tmx
-
 #begin sprites/chest.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -164,4 +159,9 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:sprites/chest.png
+
+#begin levels/Level01.tmx
+/importer:TiledMapImporter
+/processor:TiledMapProcessor
+/build:levels/Level01.tmx
 
