@@ -1,3 +1,21 @@
+20180304 07:01 PM
+
+Changes
+* Modified the level layout
+** Enemy layer
+** Goal layer
+** Extended
+* Added Zombie sprite
+* Added Chest sprite
+* Created enemy class
+
+Known Issues
+* Walking animation when standing still
+* Can stand on air - Appears issue with slightly overlapping tiles from collision layer
+* Can walk off the edge of the level
+* Can fall through floor of level
+* HUD is hard coded location, doesn't follow camera
+
 20180304 03:31 PM
 
 Changes

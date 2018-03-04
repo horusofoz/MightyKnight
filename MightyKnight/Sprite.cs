@@ -43,6 +43,8 @@ namespace MightyKnight
             animations[currentAnimation].DrawFrame(spriteBatch, position + animationOffsets[currentAnimation], effects);
         }
 
+        
+
         public void SetFlipped(bool state)
         {
             if(state == true)
@@ -63,6 +65,15 @@ namespace MightyKnight
         public void Play()
         {
             animations[currentAnimation].Play();
+        }
+
+        // get the bounds of the current animation
+        public Rectangle Bounds
+        {
+            get
+            {
+                return new Rectangle(new Point((int)position.X, (int)position.Y), animations[currentAnimation].FrameSize);
+            }
         }
     }
 }
