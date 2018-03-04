@@ -68,12 +68,12 @@ namespace MightyKnight
             else if(wasMovingLeft == true)
             {
                 acceleration.X += Game1.friction;
-                sprite.SetFlipped(false);
-                sprite.Play();
             }
             if(Keyboard.GetState().IsKeyDown(Keys.Right) == true)
             {
                 acceleration.X += Game1.acceleration;
+                sprite.SetFlipped(false);
+                sprite.Play();
             }
             else if(wasMovingRight == true)
             {
@@ -154,7 +154,7 @@ namespace MightyKnight
                     {
                         // clamp the x position to avoid moving to the platform we just hit
                         sprite.position.X = game.TileToPixel(tx);
-                        this.velocity.X = 0;    // Stop horizantal velocity
+                        this.velocity.X = 0;    // Stop horizontal velocity
                         sprite.Pause();
                     }
                 }
@@ -164,7 +164,7 @@ namespace MightyKnight
                     {
                         // clamp the x position to avoid moving into the platform we just hit
                         sprite.position.X = game.TileToPixel(tx + 1);
-                        this.velocity.X = 0;    // Stop horizantal velocity
+                        this.velocity.X = 0;    // Stop horizontal velocity
                         sprite.Pause();
                     }
                 }

@@ -17,6 +17,7 @@ namespace MightyKnight
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+
         Player player = null;
 
         Camera2D camera = null;
@@ -46,6 +47,8 @@ namespace MightyKnight
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferHeight = 720;
+            graphics.PreferredBackBufferWidth = 1280;
         }
 
         /// <summary>
