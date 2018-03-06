@@ -26,6 +26,7 @@ namespace MightyKnight
         TiledMap map = null;
         TiledMapRenderer mapRenderer = null;
         TiledMapTileLayer collisionLayer;
+        TiledMapTileLayer spikeLayer;
 
         Song gameMusic;
 
@@ -112,6 +113,9 @@ namespace MightyKnight
             {
                 if (layer.Name == "Collisions")
                     collisionLayer = layer;
+
+                if (layer.Name == "Spikes")
+                    spikeLayer = layer;
             }
 
             foreach (TiledMapObjectLayer layer in map.ObjectLayers)
