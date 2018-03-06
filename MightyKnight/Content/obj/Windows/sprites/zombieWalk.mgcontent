@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>H:/MightyKnight/MightyKnight/Content/sprites/zombieWalk.png</SourceFile>
-  <SourceTime>2018-03-04T18:53:31.5548923+10:30</SourceTime>
-  <DestFile>H:/MightyKnight/MightyKnight/Content/bin/Windows/sprites/zombieWalk.xnb</DestFile>
-  <DestTime>2018-03-04T18:53:58.5238466+10:30</DestTime>
+  <SourceFile>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/sprites/zombieWalk.png</SourceFile>
+  <SourceTime>2018-03-06T18:30:29.4176396+10:30</SourceTime>
+  <DestFile>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/bin/Windows/sprites/zombieWalk.xnb</DestFile>
+  <DestTime>2018-03-06T18:39:29.0385963+10:30</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-02T01:35:36+10:30</ImporterTime>
   <Processor>TextureProcessor</Processor>

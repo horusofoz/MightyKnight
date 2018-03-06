@@ -4,22 +4,21 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>H:/MightyKnight/MightyKnight/Content/fonts/Arial.spritefont</File>
-    <File>H:/MightyKnight/MightyKnight/Content/levels/Castle Tileset.png</File>
-    <File>H:/MightyKnight/MightyKnight/Content/levels/Fantasy Tileset.png</File>
-    <File>H:/MightyKnight/MightyKnight/Content/sprites/walk.png</File>
-    <File>H:/MightyKnight/MightyKnight/Content/fonts/Lucida.spritefont</File>
-    <File>H:/MightyKnight/MightyKnight/Content/sprites/coin.png</File>
-    <File>H:/MightyKnight/MightyKnight/Content/sprites/heart.png</File>
-    <File>H:/MightyKnight/MightyKnight/Content/sprites/trophy.png</File>
-    <File>H:/MightyKnight/MightyKnight/Content/music/harp.mp3</File>
-    <File>H:/MightyKnight/MightyKnight/Content/sounds/sword.wav</File>
-    <File>H:/MightyKnight/MightyKnight/Content/sounds/pickupCoin.wav</File>
-    <File>H:/MightyKnight/MightyKnight/Content/sounds/gruntsound.wav</File>
-    <File>H:/MightyKnight/MightyKnight/Content/sounds/jumpland.wav</File>
-    <File>H:/MightyKnight/MightyKnight/Content/sounds/die.wav</File>
-    <File>H:/MightyKnight/MightyKnight/Content/sprites/zombieWalk.png</File>
-    <File>H:/MightyKnight/MightyKnight/Content/sprites/chest.png</File>
-    <File>H:/MightyKnight/MightyKnight/Content/levels/Level01.tmx</File>
+    <File>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/levels/Castle Tileset.png</File>
+    <File>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/levels/Fantasy Tileset.png</File>
+    <File>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/sprites/walk.png</File>
+    <File>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/sprites/coin.png</File>
+    <File>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/sprites/heart.png</File>
+    <File>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/sprites/trophy.png</File>
+    <File>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/music/harp.mp3</File>
+    <File>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/sounds/sword.wav</File>
+    <File>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/sounds/pickupCoin.wav</File>
+    <File>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/sounds/gruntsound.wav</File>
+    <File>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/sounds/jumpland.wav</File>
+    <File>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/sounds/die.wav</File>
+    <File>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/sprites/zombieWalk.png</File>
+    <File>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/sprites/chest.png</File>
+    <File>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/levels/Level01.tmx</File>
+    <File>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/fonts/Lucida.spritefont</File>
   </SourceFiles>
 </SourceFileCollection>

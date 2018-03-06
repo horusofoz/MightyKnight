@@ -14,13 +14,6 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin fonts/Arial.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:PremultiplyAlpha=True
-/processorParam:TextureFormat=Compressed
-/build:fonts/Arial.spritefont
-
 #begin levels/Castle Tileset.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -56,13 +49,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:sprites/walk.png
-
-#begin fonts/Lucida.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:PremultiplyAlpha=True
-/processorParam:TextureFormat=Compressed
-/build:fonts/Lucida.spritefont
 
 #begin sprites/coin.png
 /importer:TextureImporter
@@ -164,4 +150,11 @@
 /importer:TiledMapImporter
 /processor:TiledMapProcessor
 /build:levels/Level01.tmx
+
+#begin fonts/Lucida.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:fonts/Lucida.spritefont
 

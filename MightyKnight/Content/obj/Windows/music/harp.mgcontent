@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>H:/MightyKnight/MightyKnight/Content/music/harp.mp3</SourceFile>
-  <SourceTime>2018-03-04T16:31:18.3520657+10:30</SourceTime>
-  <DestFile>H:/MightyKnight/MightyKnight/Content/bin/Windows/music/harp.xnb</DestFile>
-  <DestTime>2018-03-04T16:40:51.5224266+10:30</DestTime>
+  <SourceFile>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/music/harp.mp3</SourceFile>
+  <SourceTime>2018-03-06T18:30:29.3986377+10:30</SourceTime>
+  <DestFile>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/bin/Windows/music/harp.xnb</DestFile>
+  <DestTime>2018-03-06T18:39:28.6105535+10:30</DestTime>
   <Importer>Mp3Importer</Importer>
   <ImporterTime>2017-03-02T01:35:36+10:30</ImporterTime>
   <Processor>SongProcessor</Processor>
@@ -15,6 +15,6 @@
   <Dependencies />
   <BuildAsset />
   <BuildOutput>
-    <string>H:/MightyKnight/MightyKnight/Content/bin/Windows/music/harp.wma</string>
+    <string>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/bin/Windows/music/harp.wma</string>
   </BuildOutput>
 </PipelineBuildEvent>

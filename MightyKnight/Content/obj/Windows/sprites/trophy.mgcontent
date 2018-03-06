@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>H:/MightyKnight/MightyKnight/Content/sprites/trophy.png</SourceFile>
-  <SourceTime>2018-03-04T15:05:37.2553989+10:30</SourceTime>
-  <DestFile>H:/MightyKnight/MightyKnight/Content/bin/Windows/sprites/trophy.xnb</DestFile>
-  <DestTime>2018-03-04T15:06:04.9215808+10:30</DestTime>
+  <SourceFile>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/sprites/trophy.png</SourceFile>
+  <SourceTime>2018-03-06T18:30:29.4156394+10:30</SourceTime>
+  <DestFile>C:/Users/s181122/Documents/MightyKnight/MightyKnight/Content/bin/Windows/sprites/trophy.xnb</DestFile>
+  <DestTime>2018-03-06T18:39:27.055398+10:30</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-02T01:35:36+10:30</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -1488,9 +1488,9 @@
             Returns <c>true</c> if this curve is constant (has zero or one points); <c>false</c> otherwise.
             </summary>
         </member>
-        <member name="P:Microsoft.Xna.Framework.Curve.PreLoop">
+        <member name="P:Microsoft.Xna.Framework.Curve.Keys">
             <summary>
-            Defines how to handle weighting values that are less than the first control point in the curve.
+            The collection of curve keys.
             </summary>
         </member>
         <member name="P:Microsoft.Xna.Framework.Curve.PostLoop">
@@ -1498,9 +1498,9 @@
             Defines how to handle weighting values that are greater than the last control point in the curve.
             </summary>
         </member>
-        <member name="P:Microsoft.Xna.Framework.Curve.Keys">
+        <member name="P:Microsoft.Xna.Framework.Curve.PreLoop">
             <summary>
-            The collection of curve keys.
+            Defines how to handle weighting values that are less than the first control point in the curve.
             </summary>
         </member>
         <member name="T:Microsoft.Xna.Framework.CurveKeyCollection">
@@ -8686,15 +8686,6 @@
             <param name="graphicsDevice">A valid reference to <see cref="T:Microsoft.Xna.Framework.Graphics.GraphicsDevice"/>.</param>
             <param name="bones">The collection of bones.</param>
             <param name="meshes">The collection of meshes.</param>
-            <exception cref="T:System.ArgumentNullException">
-            <paramref name="graphicsDevice"/> is null.
-            </exception>
-            <exception cref="T:System.ArgumentNullException">
-            <paramref name="bones"/> is null.
-            </exception>
-            <exception cref="T:System.ArgumentNullException">
-            <paramref name="meshes"/> is null.
-            </exception>
         </member>
         <member name="M:Microsoft.Xna.Framework.Graphics.Model.Draw(Microsoft.Xna.Framework.Matrix,Microsoft.Xna.Framework.Matrix,Microsoft.Xna.Framework.Matrix)">
             <summary>
@@ -8715,24 +8706,12 @@
             Copies bone transforms relative to <see cref="P:Microsoft.Xna.Framework.Graphics.Model.Root"/> bone from a given array to this model.
             </summary>
             <param name="sourceBoneTransforms">The array of prepared bone transform data.</param>
-            <exception cref="T:System.ArgumentNullException">
-            <paramref name="sourceBoneTransforms"/> is null.
-            </exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">
-            <paramref name="sourceBoneTransforms"/> is invalid.
-            </exception>
         </member>
         <member name="M:Microsoft.Xna.Framework.Graphics.Model.CopyBoneTransformsTo(Microsoft.Xna.Framework.Matrix[])">
             <summary>
             Copies bone transforms relative to <see cref="P:Microsoft.Xna.Framework.Graphics.Model.Root"/> bone from this model to a given array.
             </summary>
             <param name="destinationBoneTransforms">The array receiving the transformed bones.</param>
-            <exception cref="T:System.ArgumentNullException">
-            <paramref name="destinationBoneTransforms"/> is null.
-            </exception>
-            <exception cref="T:System.ArgumentOutOfRangeException">
-            <paramref name="destinationBoneTransforms"/> is invalid.
-            </exception>
         </member>
         <member name="P:Microsoft.Xna.Framework.Graphics.Model.Bones">
             <summary>
@@ -10980,7 +10959,6 @@
             The GraphicsDevice is resetting, so GPU resources must be recreated.
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:Microsoft.Xna.Framework.Graphics.VertexBuffer.GetData``1(System.Int32,``0[],System.Int32,System.Int32,System.Int32)" -->
         <member name="M:Microsoft.Xna.Framework.Graphics.VertexBuffer.SetData``1(System.Int32,``0[],System.Int32,System.Int32,System.Int32)">
             <summary>
             Sets the vertex buffer data, specifying the index at which to start copying from the source data array,
@@ -11004,7 +10982,7 @@
             into the vertex buffer with padding between each element.
             If you specify <c>0</c> for this parameter, it will be treated as if you had specified <c>sizeof(T)</c>.
             With the exception of <c>0</c>, you must specify a value greater than or equal to <c>sizeof(T)</c>.</param>
-            <remarks>
+            <example>
             If <c>T</c> is <c>VertexPositionTexture</c>, but you want to set only the position component of the vertex data,
             you would call this method as follows:
             <code>
@@ -11018,7 +10996,7 @@
             Vector2[] texCoords = new Vector2[numVertices];
             vertexBuffer.SetData(12, texCoords, 0, numVertices, vertexBuffer.VertexDeclaration.VertexStride);
             </code>
-            </remarks>
+            </example>
             <remarks>
             If you provide a <c>byte[]</c> in the <paramref name="data"/> parameter, then you should almost certainly
             set <paramref name="vertexStride"/> to <c>1</c>, to avoid leaving any padding between the <c>byte</c> values
